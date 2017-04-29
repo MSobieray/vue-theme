@@ -1,0 +1,40 @@
+// Media Queries 
+
+$xxxl		:1915px;
+$xxl		:1700px;
+$hd			:1400px;
+$desktop	:1000px;
+$laptop		:905px;
+$tablet 	:800px;
+$lrg-mobile :675px;
+$landscape	:600px; 
+$mobile		:500px; 
+$x-small	:350px; 
+
+// Fonts
+
+$font-family-primary 		: 'Oswald', sans-serif;
+$font-family-secondary		: 'Lora', serif; 
+
+$transition-duration-short 	: 400ms;
+$transition-duration-long	: 1200ms;
+
+// Easings
+
+$easing-fast				: cubic-bezier(1, 0, 0, 0); 
+$easing-slow				: cubic-bezier(1, 1, 1, 1); 
+
+// Colors
+
+$black 		: #4a4a4a;
+$red 		: #ed1c24;
+$grey 		: #8d8d8d;
+$dark-grey  : #888888;
+$light-grey : #f5f5f5;
+$copy-grey	: #5d5d5d;
+$button-grey: #929292;
+$border-grey: #e5e5e5;
+
+// Widths
+
+$max-width	: 1250px;

@@ -1,0 +1,214 @@
+/*==============================================================================
+General
+==============================================================================*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, html {
+	min-height: 100%;
+}
+  
+body {
+	color: $red;
+}
+h1, h2, h3 {
+
+}
+p {
+	font-size: 16px;
+	margin: 24px 0;
+	color: #000;
+}
+a {
+	color: #FFF;
+	transition: all 0.3s linear;
+	&:hover {
+		color: #000;
+		transition: all 0.3s linear;
+	}
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+hr {
+	border: 0;
+	color: #bbb;
+	background-color: #bbb;
+	height: 1px;
+}
+
+/*==============================================================================
+Helper Classes
+==============================================================================*/
+
+.fixed {
+	position: fixed;
+	top: 0;
+}
+.reveal {
+	visibility: hidden;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.big {
+	font-size: 62px;
+} 
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+.grey {
+	color: #8e8e8e;
+}
+.blue {
+	color: #7496ba;
+}
+.white {
+	color: #FFF;
+}
+.orange {
+	color: #fcb040;
+}
+.black {
+	color: #000;
+}
+.black-background {
+	background-color: #000;
+}
+.white-background {
+	background-color: #FFF;
+}
+.break {
+	display: none;
+}
+.un-break {
+	display: block;
+}
+.clear {
+	clear: both;
+}
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.hideMobile {
+	@media (min-width: $laptop) {
+		visibility: visible;
+		display: inline;
+	}
+	@media (max-width: $laptop) {
+		visibility: hidden;
+		display: none;
+	}
+}
+.button {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'Oswald Stencil WF', helvetica, arial, sans-serif;
+	display: inline-block;
+	font-size: 20px;
+	color: #FFF;
+	background-color: #393226;
+	padding: 10px 110px 10px 70px;
+	position: relative;
+	transition: background-color 0.3s, color 0.3s;
+	&:hover {
+		color: #393227;
+		background-color: #f4e7c7;
+		transition: background-color 0.3s, color 0.3s;
+		span {
+			background-color: #393226;
+			&:before {
+				transform: translateX(0)
+			}
+			&:after {
+				transform: translateX(100%)
+			}
+		}
+	}
+}
+
+/*==============================================================================
+Selection
+==============================================================================*/
+
+::-moz-selection {
+	background: #000 !important;
+	color: #fff !important;
+	text-shadow: none !important;
+}
+
+::selection {
+	background: #000 !important;
+	color: #fff !important;
+	text-shadow: none !important;
+}
+.full {
+	width: 100%;
+}
+.one-column {
+
+}
+.two-column {
+
+}
+.three-column { 
+
+}
+.four-column {
+
+}
+@media screen and (max-width:860px) {
+	.one-column {
+	}
+	.two-column {
+
+	}
+	.three-column {
+
+	}
+	.four-column {
+
+	}
+}
+@media screen and (max-width:560px) {
+	.one-column {
+	}
+	.two-column {
+
+	}
+	.three-column {
+
+	}
+	.four-column {
+
+	}
+
+}
+@media screen and (max-width:420px) {
+	.one-column {
+	}
+	.two-column {
+	}
+	.three-column {
+
+	}
+	.four-column {
+
+	}
+}
+.container {
+	overflow: hidden;
+}

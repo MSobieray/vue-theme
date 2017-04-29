@@ -1,0 +1,460 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main, iframe {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*==============================================================================
+General
+==============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  min-height: 100%;
+}
+
+body {
+  color: #ed1c24;
+}
+
+p {
+  font-size: 16px;
+  margin: 24px 0;
+  color: #000;
+}
+
+a {
+  color: #FFF;
+  transition: all 0.3s linear;
+}
+
+a:hover {
+  color: #000;
+  transition: all 0.3s linear;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  border: 0;
+  color: #bbb;
+  background-color: #bbb;
+  height: 1px;
+}
+
+/*==============================================================================
+Helper Classes
+==============================================================================*/
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.reveal {
+  visibility: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.big {
+  font-size: 62px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.grey {
+  color: #8e8e8e;
+}
+
+.blue {
+  color: #7496ba;
+}
+
+.white {
+  color: #FFF;
+}
+
+.orange {
+  color: #fcb040;
+}
+
+.black {
+  color: #000;
+}
+
+.black-background {
+  background-color: #000;
+}
+
+.white-background {
+  background-color: #FFF;
+}
+
+.break {
+  display: none;
+}
+
+.un-break {
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 905px) {
+  .hideMobile {
+    visibility: visible;
+    display: inline;
+  }
+}
+
+@media (max-width: 905px) {
+  .hideMobile {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Oswald Stencil WF', helvetica, arial, sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  color: #FFF;
+  background-color: #393226;
+  padding: 10px 110px 10px 70px;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  color: #393227;
+  background-color: #f4e7c7;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover span {
+  background-color: #393226;
+}
+
+.button:hover span:before {
+  transform: translateX(0);
+}
+
+.button:hover span:after {
+  transform: translateX(100%);
+}
+
+/*==============================================================================
+Selection
+==============================================================================*/
+::-moz-selection {
+  background: #000 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+::selection {
+  background: #000 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+.full {
+  width: 100%;
+}
+
+.container {
+  overflow: hidden;
+}
+
+/*==============================================================================
+Typography
+==============================================================================*/
+a {
+  text-decoration: none;
+  transition-property: background-color, border-color, border-width, box-shadow, color, opacity, transform;
+}
+
+sup {
+  font-size: 0.65em;
+  position: relative;
+  top: -0.4em;
+  vertical-align: baseline;
+}
+
+.wysiwyg h1,
+.wysiwyg h2,
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6,
+.wysiwyg p,
+.wysiwyg ul,
+.wysiwyg ol {
+  margin-bottom: 1.5rem;
+}
+
+.wysiwyg h1:last-child,
+.wysiwyg h2:last-child,
+.wysiwyg h3:last-child,
+.wysiwyg h4:last-child,
+.wysiwyg h5:last-child,
+.wysiwyg h6:last-child,
+.wysiwyg p:last-child,
+.wysiwyg ul:last-child,
+.wysiwyg ol:last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg h1,
+.wysiwyg h2,
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wysiwyg h1,
+.wysiwyg h2 {
+  font-size: 2em;
+}
+
+.wysiwyg h3,
+.wysiwyg h4 {
+  font-size: 1.75em;
+}
+
+.wysiwyg h5,
+.wysiwyg h6 {
+  font-size: 1.5em;
+}
+
+.wysiwyg h2,
+.wysiwyg h4,
+.wysiwyg h6 {
+  margin-bottom: 1.5rem;
+}
+
+.wysiwyg p,
+.wysiwyg li {
+  font-size: 1rem;
+}
+
+.wysiwyg li {
+  margin-bottom: 0.25rem;
+}
+
+.wysiwyg li:last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg ul,
+.wysiwyg ol {
+  padding-left: 1.25rem;
+}
+
+.wysiwyg ul {
+  list-style: square;
+}
+
+.wysiwyg ul ul {
+  list-style: circle;
+  margin-bottom: 0;
+}
+
+.wysiwyg ol {
+  list-style: decimal;
+}
+
+.wysiwyg ol ol {
+  list-style: lower-alpha;
+  margin-bottom: 0;
+}
+
+.wysiwyg a {
+  text-decoration: underline;
+}
+
+.wysiwyg a:hover {
+  opacity: 0.25;
+}
+
+.wysiwyg strong {
+  font-weight: 700;
+}
+
+.wysiwyg em {
+  font-style: italic;
+}
+
+.wysiwyg strong em,
+.wysiwyg em strong {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.wysiwyg :focus {
+  outline: none;
+}
+
+/*==============================================================================
+Footer
+==============================================================================*/
+/*==============================================================================
+Header
+==============================================================================*/
+/*==============================================================================
+Navigation
+==============================================================================*/
+/*==============================================================================
+WordPress
+==============================================================================*/
+.alignnone,
+.aligncenter,
+.alignright,
+.alignleft {
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+*:last-child .alignnone,
+*:last-child .aligncenter,
+*:last-child .alignright,
+*:last-child .alignleft {
+  margin-bottom: 0;
+}
+
+.alignnone {
+  display: block;
+  margin: 0 0 30px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.alignright {
+  display: block;
+  float: right;
+  margin: 0 0 30px 30px;
+}
+
+.alignleft {
+  display: block;
+  float: left;
+  margin: 0 30px 30px 0;
+}
+
+.wp-caption .wp-caption-text {
+  font-size: 13px;
+  margin: 0;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.wp-caption img {
+  display: block;
+  height: auto !important;
+  margin: 0;
+  max-width: 100% !important;
+}
+
+img.size-full {
+  max-width: 100%;
+  width: auto;
+}
+
+@media (max-width: 500px) {
+  .alignnone {
+    margin: 0 0 15px;
+  }
+  .aligncenter {
+    margin: 0 auto 15px;
+  }
+  .alignright {
+    margin: 0 0 15px 15px;
+  }
+  .alignleft {
+    margin: 0 15px 15px 0;
+  }
+}

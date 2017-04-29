@@ -1,0 +1,131 @@
+/*==============================================================================
+Typography
+==============================================================================*/
+
+a {
+	text-decoration: none;
+	transition-property:
+		background-color,
+		border-color,
+		border-width,
+		box-shadow,
+		color,
+		opacity,
+		transform
+	;
+}
+
+sup {
+	font-size: 0.65em;
+	position: relative;
+	top: -0.4em;
+	vertical-align: baseline;
+}
+
+.wysiwyg {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol {
+		margin-bottom: 1.5rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	h1,
+	h2 {
+		font-size: 2em;
+	}
+
+	h3,
+	h4 {
+		font-size: 1.75em;
+	}
+
+	h5,
+	h6 {
+		font-size: 1.5em;
+	}
+
+	h2,
+	h4,
+	h6 {
+		margin-bottom: 1.5rem;
+	}
+
+	p,
+	li {
+		font-size: 1rem;
+	}
+
+	li {
+		margin-bottom: 0.25rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul,
+	ol {
+		padding-left: 1.25rem;
+	}
+
+	ul {
+		list-style: square;
+	}
+
+	ul ul {
+		list-style: circle;
+		margin-bottom: 0;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+
+	ol ol {
+		list-style: lower-alpha;
+		margin-bottom: 0;
+	}
+
+	a {
+		text-decoration: underline;
+		&:hover {
+			opacity: 0.25;
+		}
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	strong em,
+	em strong {
+		font-style: italic;
+		font-weight: 700;
+	}
+
+	:focus {
+		outline: none;
+	}
+}

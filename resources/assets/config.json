@@ -1,0 +1,23 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ]
+  },
+  "publicPath": "/wp-content/themes/vue-theme",
+  "devUrl": "localhost:4001",
+  "proxyUrl": "http://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "{app,resources/views}/**/*.php"
+  ],
+  "browsers": [
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ]
+}

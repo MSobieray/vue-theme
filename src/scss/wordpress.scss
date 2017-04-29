@@ -1,0 +1,77 @@
+/*==============================================================================
+WordPress
+==============================================================================*/
+
+.alignnone,
+.aligncenter,
+.alignright,
+.alignleft {
+	height: auto !important;
+	max-width: 100% !important;
+}
+
+*:last-child .alignnone,
+*:last-child .aligncenter,
+*:last-child .alignright,
+*:last-child .alignleft {
+	margin-bottom: 0;
+}
+
+.alignnone {
+	display: block;
+	margin: 0 0 30px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto 30px;
+}
+
+.alignright {
+	display: block;
+	float: right;
+	margin: 0 0 30px 30px;
+}
+
+.alignleft {
+	display: block;
+	float: left;
+	margin: 0 30px 30px 0;
+}
+
+.wp-caption .wp-caption-text {
+	font-size: 13px;
+	margin: 0;
+	padding: 4px 8px;
+	text-align: center;
+}
+
+.wp-caption img {
+	display: block;
+	height: auto !important;
+	margin: 0;
+	max-width: 100% !important;
+}
+
+img.size-full {
+	max-width: 100%;
+	width: auto;
+}
+
+@media (max-width: 500px) {
+	.alignnone {
+		margin: 0 0 15px;
+	}
+	
+	.aligncenter {
+		margin: 0 auto 15px;
+	}
+	
+	.alignright {
+		margin: 0 0 15px 15px;
+	}
+	
+	.alignleft {
+		margin: 0 15px 15px 0;
+	}
+}

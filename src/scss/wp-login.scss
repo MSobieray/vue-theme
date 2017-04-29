@@ -1,0 +1,12 @@
+body.login div#login {}
+body.login div#login h1 {
+	margin: 0 0 35px;
+}
+
+body.login div#login h1 a { 
+	background: url(../img/admin/admin-logo.png) no-repeat center;
+	background-size: 300px auto;
+	height: 117px !important;
+	margin: 0 auto;
+	width: 300px;
+}

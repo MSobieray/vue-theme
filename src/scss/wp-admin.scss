@@ -1,0 +1,29 @@
+/*==============================================================================
+Footer TFG Icon
+==============================================================================*/
+
+#tfg-icon {
+	margin: 0 15px 0 4px;
+	position: relative;
+	vertical-align: middle;
+}
+
+/*==============================================================================
+Restore full width columns for dash widgets in 3.8
+==============================================================================*/
+
+#dashboard-widgets .postbox-container {
+	min-width: 100% !important;
+}
+
+.meta-box-sortables.ui-sortable.empty-container { 
+	display: none;
+}
+
+/*==============================================================================
+Hide Navigation Dividers
+==============================================================================*/
+
+.wp-menu-separator {
+	display: none;
+}
