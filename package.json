@@ -54,11 +54,17 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.0",
     "url-loader": "^0.5.8",
+    "vue-loader": "^12.0.2",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.0",
     "webpack": "^2.4.1",
     "webpack-assets-manifest": "^0.6.2",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
     "yargs": "^7.1.0"
+  },
+  "dependencies": {
+    "vue": "^2.3.0"
   }
 }

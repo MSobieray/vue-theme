@@ -22,3 +22,13 @@
 
 /** Load Events */
 // jQuery(document).ready(() => routes.loadEvents());
+import Vue from 'vue'
+// import App from './components/App'
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Welcome To The Vue Theme!',
+  },
+})
