@@ -23,15 +23,22 @@
 /** Load Events */
 // jQuery(document).ready(() => routes.loadEvents());
 import Vue from 'vue'
+import Vuetify from 'vuetify'
+require('../styles/stylus/main.styl')
+// import 'vuetify/dist/vuetify.min.css';
+// import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(Vuetify)
 // import App from './components/App'
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   data: {
-    message: 'Welcome To The Vue Theme!',
+    message: 'Vue Theme!',
     nav: [],
     title: '',
+    nav3: '',
   },
   created: function () {
     const app = this

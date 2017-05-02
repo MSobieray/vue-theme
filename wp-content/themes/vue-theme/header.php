@@ -13,9 +13,11 @@
 		<link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/img/favicon/favicon.ico?v=4">
 		<meta name="theme-color" content="#ffffff">
-		
-		<link href="<?php bloginfo('template_url'); ?>/dist/styles/main.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+		<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
 
+		<link href="<?php bloginfo('template_url'); ?>/dist/styles/main.css" rel="stylesheet">
+		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( 'page-' . $post->post_name ); ?>>

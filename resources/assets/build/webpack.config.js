@@ -62,6 +62,10 @@ let webpackConfig = {
         }),
       },
       {
+        test: /\.styl$/,
+        loader: ['style', 'css', 'stylus']
+      },
+      {
         test: /\.(ttf|eot|png|jpe?g|gif|svg|ico)$/,
         include: config.paths.assets,
         loader: 'file',
