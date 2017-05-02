@@ -51,10 +51,10 @@ function get_parent_slug() {
 /* Custom Navigation Menus */
 /*======================================================================================*/
 
-/*
+
 register_nav_menu( 'main-navigation', 'Main Navigation' );
 
-function get_nav_menu( $menu_slug ) {
+/*function get_nav_menu( $menu_slug ) {
 	global $post;
 	$menu_locs = get_nav_menu_locations();
 	$menu_items = wp_get_nav_menu_items( $menu_locs[ $menu_slug ] );
@@ -104,8 +104,8 @@ function get_nav_menu( $menu_slug ) {
 	}
 
 	return $nav_items;
-}
-*/
+}*/
+
 
 /*==============================================================================
 Pagination

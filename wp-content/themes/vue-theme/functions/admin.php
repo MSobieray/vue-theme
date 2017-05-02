@@ -58,7 +58,8 @@ add_action('login_head', 'admin_favicon');
 
 $admin_usernames = array(
 	'thefirm',
-	'admin'
+	'admin',
+	'HyFyn'
 );
 
 $current_user = wp_get_current_user();
@@ -68,11 +69,11 @@ if( !in_array( $current_user->user_login, $admin_usernames ) ) {
 	function nav_hide_stylesheet() { ?>
 		<style>
 			#menu-dashboard ul,
-			/*#menu-appearance,*/
+		  #menu-appearance,
 			#menu-plugins,
-			/*#menu-users,*/
+			#menu-users,
 			#menu-tools,
-			/*#menu-settings,*/
+			#menu-settings,
 			#toplevel_page_edit-post_type-acf-field-group,
 			#toplevel_page_edit-post_type-acf,
 			#toplevel_page_cpt_main_menu,
@@ -91,7 +92,7 @@ if( !in_array( $current_user->user_login, $admin_usernames ) ) {
 		</style>
 	<?php }
 
-	add_action('admin_menu','wphidenag');
+	// add_action('admin_menu','wphidenag');
 	function wphidenag() {
 		remove_action( 'admin_notices', 'update_nag', 3 );
 	}
@@ -101,7 +102,7 @@ if( !in_array( $current_user->user_login, $admin_usernames ) ) {
 /* All Hide Menus */
 /*================================================================================*/
 
-add_action('admin_enqueue_scripts', 'nav_all_hide_stylesheet');
+// add_action('admin_enqueue_scripts', 'nav_all_hide_stylesheet');
 function nav_all_hide_stylesheet() { ?>
 	<style>
 		#menu-comments,
@@ -122,7 +123,7 @@ function mytheme_admin_bar_render() {
 	$wp_admin_bar->remove_menu('new-content');
 	$wp_admin_bar->remove_menu('wp-logo');
 }
-add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+// add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
 /*==============================================================================
 Removing YOAST Meta Box

@@ -30,5 +30,39 @@ new Vue({
   el: '#app',
   data: {
     message: 'Welcome To The Vue Theme!',
+    nav: [],
+    title: '',
   },
+  created: function () {
+    const app = this
+    let location = window.location.origin
+    const wp_nav = location + '/wp-json/wp-api-menus/v2/menu-locations/main-navigation'
+    const wp_pages = location + '/wp-json/wp/v2/pages'
+
+
+    fetch(wp_nav)
+      .then(res => res.json())
+      .then(data => {
+        app.nav = data 
+        if (location === 'http://localhost:3000') {
+          this.nav.forEach(el => { 
+            let newURL = el.url.replace('4001', '3000')
+            el.url = newURL
+            console.log(el.url)
+          })
+        }
+      })
+
+    fetch(wp_pages)
+      .then(res => res.json())
+      .then(data => {
+        data.forEach(el => { 
+          if (el.link === 'http://localhost:4001' + window.location.pathname) {
+            app.title = el.title.rendered
+          }
+        })
+      })
+  },
+  
+    
 })
