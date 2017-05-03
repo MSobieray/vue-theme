@@ -14,10 +14,26 @@
 		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/img/favicon/favicon.ico?v=4">
 		<meta name="theme-color" content="#ffffff">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
-		<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
+		<!-- <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css"> -->
 
 		<link href="<?php bloginfo('template_url'); ?>/dist/styles/main.css" rel="stylesheet">
 		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( 'page-' . $post->post_name ); ?>>
+		<div id="app"> <!-- Vue Attaches to this ID -->
+			<v-app id="mainNav" left-fixed-sidebar>
+			  <v-toolbar>
+			    <v-toolbar-side-icon @click.native.stop="menu = !menu" />
+			    <v-toolbar-logo>Vue Theme</v-toolbar-logo>
+			  </v-toolbar>
+			  <main>
+			    <v-sidebar left fixed drawer v-model="menu">
+			      <v-list>
+			        <v-list-item v-for="page in nav" :key="page.id">
+			          <v-list-tile>
+			            <v-list-tile-title><a v-bind:href="page.url">{{ page.title }}</a></v-list-tile-title>
+			          </v-list-tile>
+			        </v-list-item>
+			      </v-list>
+			    </v-sidebar>

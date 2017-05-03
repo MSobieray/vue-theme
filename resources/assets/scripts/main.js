@@ -38,13 +38,16 @@ new Vue({
     message: 'Vue Theme!',
     nav: [],
     title: '',
-    nav3: '',
+    menu: '',
+    posts: [],
+    card_text: 'Test',
   },
   created: function () {
     const app = this
     let location = window.location.origin
     const wp_nav = location + '/wp-json/wp-api-menus/v2/menu-locations/main-navigation'
     const wp_pages = location + '/wp-json/wp/v2/pages'
+    const wp_posts = location + '/wp-json/wp/v2/posts'
 
 
     fetch(wp_nav)
@@ -52,7 +55,7 @@ new Vue({
       .then(data => {
         app.nav = data 
         if (location === 'http://localhost:3000') {
-          this.nav.forEach(el => { 
+          app.nav.forEach(el => { 
             let newURL = el.url.replace('4001', '3000')
             el.url = newURL
             console.log(el.url)
@@ -68,6 +71,18 @@ new Vue({
             app.title = el.title.rendered
           }
         })
+      })
+
+    fetch(wp_posts)
+      .then(res => res.json())
+      .then(data => {
+        app.posts = data 
+        if (location === 'http://localhost:3000') {
+          app.posts.forEach(el => { 
+            let newURL = el.link.replace('4001', '3000')
+            el.link = newURL
+          })
+        }
       })
   },
   
