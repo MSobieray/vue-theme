@@ -30,8 +30,18 @@ let webpackConfig = {
         use: 'eslint',
       },
       {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
+          }
+        }
+      },
+      {
         test: /\.js$/,
-        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
+        exclude: /node_modules/,
         loader: 'buble',
         options: { objectAssign: 'Object.assign' },
       },

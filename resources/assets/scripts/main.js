@@ -24,12 +24,14 @@
 // jQuery(document).ready(() => routes.loadEvents());
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-require('../styles/stylus/main.styl')
+import '../styles/stylus/main.styl'
+
+import Post from './components/Post.vue'
 // import 'vuetify/dist/vuetify.min.css';
 // import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify)
-// import App from './components/App'
+//import App from './components/App'
 
 /* eslint-disable no-new */
 new Vue({
@@ -39,17 +41,18 @@ new Vue({
     nav: [],
     title: '',
     menu: '',
-    posts: [],
     card_text: 'Test',
   },
+  components: {
+   Post,
+  }, 
   created: function () {
     const app = this
-    let location = window.location.origin
+    const location = window.location.origin
     const wp_nav = location + '/wp-json/wp-api-menus/v2/menu-locations/main-navigation'
     const wp_pages = location + '/wp-json/wp/v2/pages'
-    const wp_posts = location + '/wp-json/wp/v2/posts'
-
-
+    const appEl = document.querySelector("#app")
+    document.addEventListener('DOMContentLoaded', appEl.style.display = 'block', false);
     fetch(wp_nav)
       .then(res => res.json())
       .then(data => {
@@ -58,7 +61,6 @@ new Vue({
           app.nav.forEach(el => { 
             let newURL = el.url.replace('4001', '3000')
             el.url = newURL
-            console.log(el.url)
           })
         }
       })
@@ -73,17 +75,7 @@ new Vue({
         })
       })
 
-    fetch(wp_posts)
-      .then(res => res.json())
-      .then(data => {
-        app.posts = data 
-        if (location === 'http://localhost:3000') {
-          app.posts.forEach(el => { 
-            let newURL = el.link.replace('4001', '3000')
-            el.link = newURL
-          })
-        }
-      })
+    
   },
   
     

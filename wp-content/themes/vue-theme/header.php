@@ -21,7 +21,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( 'page-' . $post->post_name ); ?>>
-		<div id="app"> <!-- Vue Attaches to this ID -->
+		<div id="app" style="display: none"> <!-- Vue Attaches to this ID -->
 			<v-app id="mainNav" left-fixed-sidebar>
 			  <v-toolbar>
 			    <v-toolbar-side-icon @click.native.stop="menu = !menu" />
