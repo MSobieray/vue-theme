@@ -26,7 +26,8 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import '../styles/stylus/main.styl'
 
-import Post from './components/Post.vue'
+import PostsIndex from './components/PostsIndex.vue'
+import SinglePost from './components/SinglePost.vue'
 // import 'vuetify/dist/vuetify.min.css';
 // import 'vuetify/dist/vuetify.min.css'
 
@@ -44,39 +45,43 @@ new Vue({
     card_text: 'Test',
   },
   components: {
-   Post,
+   PostsIndex,
+   SinglePost,
   }, 
-  created: function () {
+  created() {
     const app = this
     const location = window.location.origin
     const wp_nav = location + '/wp-json/wp-api-menus/v2/menu-locations/main-navigation'
     const wp_pages = location + '/wp-json/wp/v2/pages'
     const appEl = document.querySelector("#app")
+
+    /* Preventive Hack to Hide FOUC */
     document.addEventListener('DOMContentLoaded', appEl.style.display = 'block', false);
+
+
     fetch(wp_nav)
-      .then(res => res.json())
-      .then(data => {
-        app.nav = data 
-        if (location === 'http://localhost:3000') {
-          app.nav.forEach(el => { 
-            let newURL = el.url.replace('4001', '3000')
-            el.url = newURL
-          })
-        }
-      })
+    .then(res => res.json())
+    .then(data => {
+      app.nav = data 
+      if (location === 'http://localhost:3000') {
+        app.nav.forEach(el => { 
+          let newURL = el.url.replace('4001', '3000')
+          el.url = newURL
+        })
+      }
+    })
+
 
     fetch(wp_pages)
-      .then(res => res.json())
-      .then(data => {
-        data.forEach(el => { 
-          if (el.link === 'http://localhost:4001' + window.location.pathname) {
-            app.title = el.title.rendered
-          }
-        })
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(el => { 
+        if (el.link === 'http://localhost:4001' + window.location.pathname) {
+          app.title = el.title.rendered
+        }
       })
+    })
 
-    
-  },
-  
-    
+
+  }, 
 })

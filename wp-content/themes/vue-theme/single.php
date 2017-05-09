@@ -17,7 +17,7 @@
 	    </v-btn>
 	  </v-card-row>
 	</v-card> -->
-	<posts-index></posts-index>
+	<single-post></single-post>
 </section>
 
 <?php get_footer(); ?>

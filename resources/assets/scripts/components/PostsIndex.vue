@@ -1,17 +1,19 @@
 <template>
   <div class="post">
-    <h1>{{ title }}</h1>
-    
+    <div class="post-content" v-for="post in posts">
+      <a :href="post.link">
+        <h1 v-text="post.title.rendered"></h1>
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'post',
+  name: 'posts-index',
   data () {
     return {
       posts: [],
-      title: 'Blog Page'
     }
   },
   created: function () {
