@@ -41,6 +41,7 @@ new Vue({
     themeName: 'Vuewp',
     nav: [],
     title: '',
+    content: '',
     menu: '',
     card_text: 'Test',
   },
@@ -53,10 +54,10 @@ new Vue({
     const location = window.location.origin
     const wp_nav = location + '/wp-json/wp-api-menus/v2/menu-locations/main-navigation'
     const wp_pages = location + '/wp-json/wp/v2/pages'
-    const appEl = document.querySelector("#app")
+    // const appEl = document.querySelector("#app")
 
     /* Preventive Hack to Hide FOUC */
-    document.addEventListener('DOMContentLoaded', appEl.style.display = 'block', false);
+    // document.addEventListener('DOMContentLoaded', appEl.style.display = 'block', false);
 
 
     fetch(wp_nav)
@@ -78,8 +79,10 @@ new Vue({
       data.forEach(el => { 
         if (el.link === 'http://localhost:4001' + window.location.pathname) {
           app.title = el.title.rendered
+          app.content = el.content.rendered
         }
       })
+      // console.log(data)
     })
 
 

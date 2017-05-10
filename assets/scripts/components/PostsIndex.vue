@@ -2,7 +2,7 @@
   <div class="post">
     <div class="post-content" v-for="post in posts">
       <a :href="post.link">
-        <h1 v-text="post.title.rendered"></h1>
+        <h2 v-text="post.title.rendered"></h2>
       </a>
     </div>
   </div>
