@@ -28,6 +28,7 @@ import '../styles/stylus/main.styl'
 
 import PostsIndex from './components/PostsIndex.vue'
 import SinglePost from './components/SinglePost.vue'
+import SiteLoader from './components/SiteLoader.vue'
 // import 'vuetify/dist/vuetify.min.css';
 // import 'vuetify/dist/vuetify.min.css'
 
@@ -48,6 +49,7 @@ new Vue({
   components: {
    PostsIndex,
    SinglePost,
+   SiteLoader,
   }, 
   created() {
     const app = this
