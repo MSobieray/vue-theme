@@ -1,11 +1,8 @@
 <?php get_header(); ?>
-	<v-content>
-	  <v-container fluid>
-	    <div class="title">
-				<h2>{{ title }}</h2>
-	    </div>
-	  </v-container>
-	</v-content>	 
+	
+  <div class="title">
+		<h2 v-html="title"></h2>
+  </div>
 	<?php the_content(); ?>
 
 <?php get_footer(); ?>

@@ -43,7 +43,7 @@ export default {
         this.imageData = data
         console.log(this.imageData)
       })
-    }, 100)
+    }, 300)
     
   }
 }
