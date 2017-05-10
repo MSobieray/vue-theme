@@ -1,3 +1,5 @@
+		 		</v-container>
+    	</v-content>
 		 </main>
 		</v-app>
 		<v-footer>

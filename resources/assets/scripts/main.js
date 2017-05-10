@@ -38,7 +38,7 @@ Vue.use(Vuetify)
 new Vue({
   el: '#app',
   data: {
-    message: 'Vue Theme!',
+    themeName: 'Vuewp',
     nav: [],
     title: '',
     menu: '',

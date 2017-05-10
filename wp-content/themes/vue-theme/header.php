@@ -22,18 +22,28 @@
 	</head>
 	<body <?php body_class( 'page-' . $post->post_name ); ?>>
 		<div id="app" style="display: none"> <!-- Vue Attaches to this ID -->
-			<v-app id="mainNav" left-fixed-sidebar>
+			<v-app id="mainNav">
+			<!-- Horizontal Toolbar -->
+				<v-toolbar>
+				  <v-toolbar-logo>{{ themeName }}</v-toolbar-logo>
+				  <v-toolbar-items class="hidden-sm-and-down">
+				    <v-toolbar-item v-for="page in nav" v-bind:href="page.url">{{ page.title }}</v-toolbar-item>
+				  </v-toolbar-items>
+				</v-toolbar>
+				<!-- Verical Toolbar  -->
 			  <v-toolbar>
 			    <v-toolbar-side-icon @click.native.stop="menu = !menu" />
-			    <v-toolbar-logo>Vue Theme</v-toolbar-logo>
+			    <v-toolbar-logo>{{ themeName }}</v-toolbar-logo>
 			  </v-toolbar>
 			  <main>
 			    <v-sidebar left fixed drawer v-model="menu">
 			      <v-list>
 			        <v-list-item v-for="page in nav" :key="page.id">
-			          <v-list-tile>
-			            <v-list-tile-title><a v-bind:href="page.url">{{ page.title }}</a></v-list-tile-title>
+			          <v-list-tile :href="page.url">
+			            <v-list-tile-title>{{ page.title }}</v-list-tile-title>
 			          </v-list-tile>
 			        </v-list-item>
 			      </v-list>
 			    </v-sidebar>
+			    <v-content>
+			    	<v-container fluid>
