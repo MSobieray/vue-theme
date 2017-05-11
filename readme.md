@@ -46,13 +46,13 @@ Assets:
 src (files for gulp) -- Not used but I might eventually use some of the css, php, and js
 
 wp-content: 
-	- themes (where the wp themes are stored)
-	- vue-theme (the theme you should have active)
-		- dist (this is the folder where assets get compiled _this is ignored from the repo and should be rebuilt for production/deployment_)
-	- functions (contain php functions to use with wordpress)
-	- templates (custome wordpress templates)
-	- *.php are the basic wordpress files
-	- style.css (the required stylesheet for a wordpress theme)
+- themes (where the wp themes are stored)
+- vue-theme (the theme you should have active)
+	- dist (this is the folder where assets get compiled _this is ignored from the repo and should be rebuilt for production/deployment_)
+- functions (contain php functions to use with wordpress)
+- templates (custome wordpress templates)
+- *.php are the basic wordpress files
+- style.css (the required stylesheet for a wordpress theme)
 
 ### Hopefully coming soon
 
