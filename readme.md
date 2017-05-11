@@ -12,13 +12,13 @@ The theme is versitile enough to use Vue components that get data from the WP re
 - Docker - (optional but comes with a docker-compose to quickly spin up Wordpress and a DB locally)
 - Webpack to compile and watch assets for changes
 - Buble ES2015 compiler
-- BrowserSync to reverse proxy the site while in development _curently not working right_
+- BrowserSync to reverse proxy the site while in development _currently not working right_
 - Vue.js to handle components and front-end development
 - Vuetify to quickly allow access to a material design framework and rapid prototyping.
 - WP REST API Menus - A WP Plugin that gives you an endpoint in the REST API with the menu data.
 - Scss/Stylus - I use Scss as the main css lang and Stylus is used for Vuetify but you can use it as the primary lang if you like.
 
-_All the dependinces will be installed with the setup except you will need to have [docker](https://www.docker.com) installed on your machine and wil also need to install WP Rest API Menus plugin via the wordpress admin_
+_All the dependinces will be installed with the setup except you will need to have [docker](https://www.docker.com) installed on your machine and will also need to install WP Rest API Menus plugin via the wordpress admin_
 
 ### Getting Setup
 
@@ -43,7 +43,18 @@ Assets:
 	-  main.js (Webpack entrypoint and Vue Setup)
 - styles (all the scss and stylus files)
 
-### Nice To Haves
+src (files for gulp) -- Not used but I might eventually use some of the css, php, and js
+
+wp-content: 
+	- themes (where the wp themes are stored)
+	- vue-theme (the theme you should have active)
+		- dist (this is the folder where assets get compiled _this is ignored from the repo and should be rebuilt for production/deployment_)
+	- functions (contain php functions to use with wordpress)
+	- templates (custome wordpress templates)
+	- *.php are the basic wordpress files
+	- style.css (the required stylesheet for a wordpress theme)
+
+### Hopefully coming soon
 
 - [ ] Vuex
 - [ ] IndexDB
