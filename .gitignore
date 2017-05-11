@@ -1,8 +1,10 @@
 wp-content/themes/vue-theme/dist
 node_modules
 npm-debug.log
+wp-content/index.php
 wp-content/plugins/
 wp-content/uploads/
 wp-content/upgrade/
+wp-content/themes/index.php
 wp-content/themes/twenty*
 .DS_store
