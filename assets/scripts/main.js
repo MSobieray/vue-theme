@@ -39,12 +39,12 @@ Vue.use(Vuetify)
 new Vue({
   el: '#app',
   data: {
-    themeName: 'Vuewp',
+    themeName: 'Vue Theme',
     nav: [],
     title: '',
     content: '',
     menu: '',
-    card_text: 'Test',
+    page: 1,
   },
   components: {
    PostsIndex,

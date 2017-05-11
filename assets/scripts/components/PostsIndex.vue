@@ -18,7 +18,7 @@
         <div v-html="post.excerpt.rendered"></div>
       </v-card-text>
       <v-card-row actions class="blue-grey darken-1 mt-0">
-        <v-btn tag="a" :href.native="post.link" flat class="white--text" >Read Post
+        <v-btn tag="a" :href.native="post.link" flat class="white--text" >Read More
           <v-icon right>navigate_next</v-icon>
         </v-btn>
       </v-card-row>

@@ -24,7 +24,7 @@ const config = merge({
     cacheBusting: isProduction,
     watcher: !!argv.watch,
   },
-  watch: [],
+  watch: [rootPath+'/wp-content/themes/vue-theme/'],
   browsers: [],
 }, userConfig);
 

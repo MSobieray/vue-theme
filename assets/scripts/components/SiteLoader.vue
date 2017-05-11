@@ -1,5 +1,5 @@
 <template>
-  <div class="site-loader" v-show="!loaded" @load="loaded = true">
+  <div class="site-loader" v-show="!loaded">
     <v-progress-circular indeterminate class="primary--text" />
   </div>
 
@@ -13,8 +13,13 @@ export default {
       loaded: false,
     }
   },
-  computed() {
-    
+  mounted() {
+    this.loaded = true;
+  },
+  methods: {
+    load() {
+      window.addEventListener('load', this.loaded = true, false )
+    }
   }
 }
 </script>

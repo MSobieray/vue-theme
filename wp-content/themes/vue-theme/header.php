@@ -38,7 +38,7 @@
 			    <v-toolbar-side-icon @click.native.stop="menu = !menu" />
 			    <v-toolbar-logo>{{ themeName }}</v-toolbar-logo>
 			  </v-toolbar>
-			  <main v-cloak>
+			  <main>
 			    <v-sidebar left fixed drawer v-model="menu">
 			      <v-list>
 			        <v-list-item v-for="page in nav" :key="page.id">

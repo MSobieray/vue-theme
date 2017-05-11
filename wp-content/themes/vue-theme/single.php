@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="posts">
+<section id="posts" v-cloak>
 	<!-- <v-card v-for="post in posts" :key="post.id">
 	  <v-card-row class="blue-grey darken-1">
 	    <v-card-title>
