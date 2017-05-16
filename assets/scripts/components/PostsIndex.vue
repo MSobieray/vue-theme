@@ -1,5 +1,5 @@
 <template>
-  <div class="post">
+  <div class="post" v-cloak>
     <!-- <div class="post-content" v-for="post in posts">
       <a :href="post.link">
         <h2 v-text="post.title.rendered"></h2>

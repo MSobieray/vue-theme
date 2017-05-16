@@ -24,16 +24,15 @@
 		<div id="app"> <!-- Vue Attaches to this ID -->
 
 			<v-app id="mainNav">
-				<site-loader></site-loader>
-			<!-- Horizontal Toolbar -->
+				<!-- <site-loader></site-loader> -->
+				<!-- Horizontal Toolbar -->
 				<v-toolbar>
-					
 				  <v-toolbar-logo>{{ themeName }}</v-toolbar-logo>
 				  <v-toolbar-items class="hidden-sm-and-down">
 				    <v-toolbar-item v-for="page in nav" :key="page.id" v-bind:href="page.url" ripple>{{ page.title }}</v-toolbar-item>
 				  </v-toolbar-items>
 				</v-toolbar>
-				<!-- Verical Toolbar  -->
+				<!-- Vertical Toolbar  -->
 			  <v-toolbar>
 			    <v-toolbar-side-icon @click.native.stop="menu = !menu" />
 			    <v-toolbar-logo>{{ themeName }}</v-toolbar-logo>
